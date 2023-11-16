@@ -4,9 +4,10 @@ from logger import get_logger, init_logger, set_logger
 
 
 def test(log: logging.Logger = None):
-    log.setLevel(10)
-    log.info("INFO")
+    log.setLevel(logging.DEBUG)
+    log.info(f"I am {log.name}")
     log.debug("DEBUG")
+    log.info("INFO")
     log.warning("WARNING")
     log.error("ERROR")
     log.critical("CRITICAL")
